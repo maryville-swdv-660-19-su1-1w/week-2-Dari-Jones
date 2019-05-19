@@ -45,8 +45,9 @@ class Game(models.Model):
         self.guessed_word_state = new_word_state
 
     def __incrementGuessesTaken( self ):
-        self.guesses_taken = self.guesses_taken + 1
-    
+        # self.guesses_taken = self.guesses_taken + 1
+        self.guesses_taken = self.guesses_taken
+
     ## Public methods
     def handleGuess( self, guessed_letter ):
         self.__addGuessedLetter( guessed_letter )
